@@ -1,5 +1,5 @@
 import math
-class Vectors:
+class Vector:
     def __init__(self) :
       pass
  
@@ -10,6 +10,11 @@ class Vectors:
         self.vu =list(map(int,vu))
         vv = v.split(',')
         self.vv = list(map(int,vv))
+    def print(self):
+        vu = self.vu
+        vv = self.vv
+        out = '<{},{}> & <{},{}> '.format(vu[0],vu[1],vv[0],vv[1])
+        print(out)
     def Magnitude(self,u):
         vu = u.split(',')
         vu =list(map(int,vu))
@@ -22,9 +27,10 @@ class Vectors:
         vv = self.vv
         ians = (vu[0]*vv[0])+(vu[1]*vv[1])
         return ians
+
     def  Angle(self):
 
-        pro = self.DotProduct(self.u,self.v)
+        pro = self.DotProduct( )
         um =  self.Magnitude(self.u)
         vm = self.Magnitude(self.v)
         vum = um*vm
